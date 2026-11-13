@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#number">
+  <title>Mis Finanzas</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="cabecera">
+    <h1>💼 Mis Finanzas</h1>
+    <p>Controla lo que ganas y lo que gastas cada día</p>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>💵 Ingreso de hoy</h2>
+      <input type="number" id="monto" placeholder="Monto en soles">
+      <button class="verde" onclick="guardarIngreso()">➕ Guardar ingreso</button>
+    </section>
+
+    <section class="tarjeta">
+      <h2>🧾 Gasto de hoy</h2>
+      <select id="categoria">
+        <option>🍽️ Comida</option>
+        <option>🚌 Pasajes</option>
+        <option>🏠 Alquiler</option>
+        <option>💡 Luz y agua</option>
+        <option>🎒 Colegio</option>
+        <option>📦 Otros</option>
+      </select>
+      <input type="number" id="montoGasto" placeholder="Monto en soles">
+      <button class="rojo" onclick="guardarGasto()">➖ Guardar gasto</button>
+    </section>
+
+    <section class="tarjeta">
+      <h2>📊 Resumen del mes</h2>
+      <div class="resumen">
+        <div class="dato">
+          <span class="icono">💰</span>
+          <small>Ingresos</small>
+          <b id="total" class="verde-txt">S/ 0</b>
+        </div>
+        <div class="dato">
+          <span class="icono">📉</span>
+          <small>Gastos</small>
+          <b id="totalGastos" class="rojo-txt">S/ 0</b>
+        </div>
+        <div class="dato">
+          <span class="icono">✅</span>
+          <small>Saldo</small>
+          <b id="saldo" class="azul-txt">S/ 0</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="tarjeta">
+      <h2>🗂️ Gastos por categoría</h2>
+      <ul id="listaCategorias"></ul>
+    </section>
+
+    <section class="tarjeta">
+      <h2>🕒 Movimientos de hoy</h2>
+      <ul id="historial"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
